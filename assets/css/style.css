@@ -73,6 +73,7 @@ header .logo-section .search-box input {
 header .logo-section .search-box select {
     max-width: 250px;
     width: 100%;
+    background: transparent;
 }
 
 header .logo-section .search-box .location-search,
@@ -81,14 +82,26 @@ header .logo-section .search-box .restro-search {
     align-items: center;
 }
 
+header .logo-section .search-box .restro-search img,
+header .logo-section .search-box .location-search img {
+    margin-top: 3px;
+}
+
 header .logo-section .search-box .pipe {
     color: #ccc;
     margin: 0 6px;
 }
 
+header .logo-section img {
+    max-width: 180px;
+    height: auto;
+    object-fit: contain
+}
+
 header .cart {
     position: relative;
     opacity: 0.7;
+    margin-top: 11px;
 }
 
 header .cart span {
@@ -529,6 +542,15 @@ footer.footer {
     font-size: 16px;
 }
 
+.cart-details .product-header h5.cart-product-price,
+.cart-details .product-header h5.cart-product-total,
+.cart-details .product-header h5.cart-product-quantity,
+.modal-price,
+.modal-quantity,
+.modal-total {
+    text-align: center;
+}
+
 .cart-details .product {
     margin-bottom: 30px;
 }
@@ -576,6 +598,11 @@ footer.footer {
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4); 
   }
+
+  .modal-header h2 {
+      margin-top: 0;
+      margin-bottom: 40px;
+  }
   
   .modal-content {
     background-color: #fefefe;
@@ -584,6 +611,7 @@ footer.footer {
     border: 1px solid #888;
     width: 60%;
     padding-top: 40px;
+    border-radius: 14px;
   }
   
   .close {
@@ -607,6 +635,7 @@ footer.footer {
   .slider .slider-img {
     height: 400px;
     object-fit: cover;
+    border-radius: 14px;
   }
 
   .next-icon {

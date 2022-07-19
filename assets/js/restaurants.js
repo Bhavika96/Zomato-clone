@@ -156,7 +156,7 @@ for(let i=0; i<productListArray.length; i++) {
         <div class='content-section'>
             <a href="#" class="add-cart">Add to cart</a>
             <div class='restro-sec'><h4>${restro_name}</h4><span class='rating'>${rating}</span></div>
-            <div class='menu-section'><p class='menu-item'>${menu_item}</p><p class='price'>${price}</p></div>
+            <div class='menu-section'><p class='menu-item'>${menu_item}</p><p class='price'>₹${price}</p></div>
             <div class='safety-section'><p>${safety_text} + orders placed from here recently</p></div>
         </div>
     </div>`
@@ -252,9 +252,9 @@ function displayCart() {
             <div class="product">
             <div class="food-title"><img src="${item.image}">
             <span>${item.restro_name}</span></div>
-            <div>${item.price}</div>
-            <div>${item.in_cart}</div>
-            <div>${item.in_cart * item.price}</div>
+            <div class="modal-price">${item.price}</div>
+            <div class="modal-quantity">${item.in_cart}</div>
+            <div class="modal-total">₹${item.in_cart * item.price}</div>
             </div>
             
             `;
@@ -263,7 +263,7 @@ function displayCart() {
         productTotal.innerHTML = `
         <div class="total-cost">
              <h4 class="title">Total</h4>
-             <h4 class="final-cost">${cartCost}</h4>
+             <h4 class="final-cost">₹${cartCost}</h4>
          </div>
         `
 
