@@ -66,6 +66,10 @@ header .logo-section .search-box input {
     font-size: 15px;
 }
 
+header .logo-section .search-box input {
+    width: 300px;
+}
+
 header .logo-section .search-box select {
     max-width: 250px;
     width: 100%;
@@ -80,6 +84,25 @@ header .logo-section .search-box .restro-search {
 header .logo-section .search-box .pipe {
     color: #ccc;
     margin: 0 6px;
+}
+
+header .cart {
+    position: relative;
+    opacity: 0.7;
+}
+
+header .cart span {
+    position: absolute;
+    top: -8px;
+    background: rgb(239, 79, 95);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    left: 20px;
+    text-align: center;
 }
 
 .breadcrumbs ul {
@@ -251,7 +274,7 @@ header .logo-section .search-box .pipe {
 
 .product-section .product-box .card .image-box .off {
     position: absolute;
-    bottom: 25px;
+    bottom: 35px;
     left: 0;
     background-color: rgb(37, 111, 239);
     padding: 3px 7px;
@@ -322,6 +345,27 @@ header .logo-section .search-box .pipe {
 .product-section .product-box .card .content-section .safety-section {
     font-size: 12px;
     color: #7c7c7c;
+}
+
+.product-section .product-box .card .content-section .add-cart {
+    border: 1px solid rgb(239, 79, 95);
+    color: rgb(239, 79, 95);
+    box-shadow: rgb(54 54 54 / 6%) 0px 1px 2px;
+    border-radius: 7px;
+    padding: 8px 18px;
+    cursor: pointer;
+    height: 100%;
+    font-size: 14px;
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.product-section .product-box .card .content-section .add-cart:hover {
+    background: rgb(239, 79, 95);
+    color: #fff;
 }
 
 .footer-top-section ul.list-row-sec {
@@ -477,6 +521,118 @@ footer.footer {
     outline: transparent !important;
 }
 
+.cart-details .product-header h5 {
+    display: inline-block;
+    max-width: 215px;
+    width: 100%;
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.cart-details .product {
+    margin-bottom: 30px;
+}
+
+.cart-details .product div {
+    display: inline-block;
+    max-width: 215px;
+    width: 100%;
+    vertical-align: text-top;
+}
+
+.cart-details .products img {
+    max-width: 80px;
+    width: 100%;
+}
+
+.cart-details .products .food-title span {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.cart-details .total-cost .title {
+    display: inline-block;
+    max-width: 655px;
+    width: 100%;
+}
+
+.cart-details .total-cost .final-cost {
+    display: inline-block;
+    max-width: 215px;
+    width: 100%;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 60%;
+    padding-top: 40px;
+  }
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .slider {
+      margin-top: 30px;
+  }
+
+  .slider .slider-img {
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .next-icon {
+    transform: rotate(180deg);
+  }
+
+  .btn-sec {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 30px;
+  }
+
+  .btn-sec a {
+      cursor: pointer;
+  }
+
+  .btn-sec a img {
+      background: #ccc;
+      border-radius: 50%;
+      padding: 6px;
+      opacity: 0.7; 
+  }
+
+  .btn-sec a img:hover {
+      opacity: 1;
+  }
 /*----------------------Media Queries -------------------------*/
 @media only screen and (max-width: 1100px) {
     .container {
@@ -572,6 +728,11 @@ footer.footer {
     .country-lang-section.d-flex-space-btw {
         justify-content: flex-start;
         margin-top: 15px;
+    }
+
+    .slider .slider-img {
+        max-width: 100%;
+        height: auto;
     }
 
 }

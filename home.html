@@ -28,7 +28,7 @@
                         <span class="pipe">|</span>
                         <div class="restro-search">
                             <span><img src="./assets/images/magnifying-glass.png" width="18" height="18" alt="Search" title="Search"></span>
-                            <input type="text" name="" value="" placeholder="Search for restaurant, cuisine or a dish">
+                            <input type="text" name="" value="" id="myInput" placeholder="Search for restaurant, cuisine or a dish" onkeyup="searchYoutubers()">
                         </div>
                     </div>
                 </div>
@@ -36,9 +36,31 @@
                     <a href="#">Log in</a>
                     <a href="#">Sign up</a>
                 </div>
+                <div class="cart" id="myBtn"><img src="./assets/images/shopping-cart.png"><span>0</span></div>
             </div>
         </div>
     </header>
+
+    <section class="slider" >
+        <div class="container">
+            <div class="slide-section">
+                <div class="slide">
+                    <img class="slider-img" src="/assets/images/slider-01.jpg" width="1100">
+                </div>
+                <div class="slide">
+                    <img class="slider-img" src="/assets/images/slider-02.jpg" width="1100">
+                </div>
+                <div class="slide">
+                    <img class="slider-img" src="/assets/images/slider-03.jpg" width="1100">
+                </div>
+            </div>
+            <div class="btn-sec">
+                <a onclick="slide_next_prev(-1)"><img src="./assets/images/left-chevron.png" width=""></a>
+                <a onclick="slide_next_prev(1)"><img src="./assets/images/left-chevron.png" width="" class="next-icon"></a>
+            </div>
+            
+        </div>
+    </section>
 
     <div class="breadcrumbs">
         <div class="container">
@@ -77,6 +99,8 @@
         </div>
     </div>
 
+    
+
     <div class="filter-section">
         <div class="container">
             <a href="#"><span class="red-box count">1</span>Filters</a>
@@ -91,36 +115,8 @@
     <div class="product-section">
         <div class="container">
             <h1>Viman Nagar Restaurants, Pune</h1>
-            <div class="product-row d-flex" id="product_row"></div>
-                <div id="list"></div>
-                <!-- <div class="product-box">
-                    <div class="card">
-                        <div class="image-box">
-                            <div class="image">
-                                <img src="./assets/images/product-1.avif">
-                            </div>
-                            <div class="promoted">Promoted</div>
-                            <div class="off">40% Off</div>
-                            <div class="time">42 min</div>
-                        </div>
-                        <div class="content-section">
-                            <div class="restro-sec">
-                                <h4>Wadeshwar</h4>
-                                <span class="rating">4.0</span>
-                            </div>
-                            <div class="menu-section">
-                                <p class="menu-item">South Indian, Sandwich, Fast Food, Maharashtrian, Beverages, Shake</p>
-                                <p class="price">₹100 for one</p>
-                            </div>
-                            <div class="safety-section">
-                                <p>10775+ orders placed from here recently</p>
-                                <img src="">
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div> -->
-
+            <div class="product-row d-flex" id="product_row">
+            </div>
         </div>
     </div>
 
@@ -291,6 +287,45 @@
             </div>
         </div>
     </footer>
+
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="cart-details">
+            <div class="container">
+                <div class="product-container">
+                    <div class="product-header">
+                        <h5 class="cart-product-title">Title</h5>
+                        <h5 class="cart-product-price">Price</h5>
+                        <h5 class="cart-product-total">Quantity</h5>
+                        <h5 class="cart-product-quantity">Total</h5>
+                    </div>
+                    <div class="products"></div>
+                </div>
+                <div class="productTotal"></div>
+            </div>
+        </div>
+        </div>
+      
+      </div>
+
+    <!-- <div class="cart-details">
+        <div class="container">
+            <div class="product-container">
+                <div class="product-header">
+                    <h5 class="cart-product-title">Title</h5>
+                    <h5 class="cart-product-price">Price</h5>
+                    <h5 class="cart-product-total">Quantity</h5>
+                    <h5 class="cart-product-quantity">Total</h5>
+                </div>
+                <div class="products"></div>
+            </div>
+            <div class="productTotal"></div>
+        </div>
+    </div> -->
+    
+    
     
 </body>
 <script src='assets/js/main.js'></script>
