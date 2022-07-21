@@ -148,7 +148,7 @@ for(let i=0; i<productListArray.length; i++) {
     element.className = "product-box";
     element.innerHTML = `<div class='card'>
         <div class='image-box'>
-            <div class='image'><img src=${image} class='product-image'></div>
+            <div class='image'><img src=${image} class='product-image' width='310' height='235'></div>
             ${ele}
             <div class='off'>${off}% Off</div>
             <div class='time'> ${time}min</div>
