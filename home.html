@@ -33,10 +33,12 @@
                     </div>
                 </div>
                 <div class="link-section d-flex-space-btw">
-                    <a href="#">Log in</a>
-                    <a href="#">Sign up</a>
+                    <a href="#" id="login" class="modal_btn" onclick="open_modal('login')">Login</a>
+                    <a href="#" id="signup" class="modal_btn" onclick="open_modal('signup')">Sign up</a>
+                    <!-- <button id="modal-login" class="modal-btn" onclick = "open_modal('modal-login')">Log in</button>
+                    <button id="modal-signup" class="modal-btn" onclick = "open_modal('modal-signup')">Sign up</button> -->
                 </div>
-                <div class="cart" id="myBtn"><img src="./assets/images/shopping-cart.png"><span>0</span></div>
+                <a href="#" class="cart modal_btn" id="modal-cart" onclick = "open_modal('modal-cart')"><img src="./assets/images/shopping-cart.png"><span>0</span></a>
             </div>
         </div>
     </header>
@@ -288,15 +290,66 @@
         </div>
     </footer>
 
-    <div id="myModal" class="modal">
-        
+    <div id="signup" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+              <h2>Sign up</h2>
+              <span class="modal-close">×</span>
+          </div>
+          <div class="modal-inner-content">
+              <form id="">
+                  <div class="form-field">
+                      <input type="text" id="name" placeholder="Enter Your Name" class="form-input">
+                  </div>
+                  <div class="form-field">
+                      <input type="email" id="email" placeholder="Enter Your email" class="form-input">
+                  </div>
+                  <div class="form-field">
+                      <input type="tel" id="number" placeholder="Enter Your Phone Number" class="form-input">
+                  </div>
+                  <div class="form-field">
+                      <input type="password" id="password" placeholder="Enter Your New Password" class="form-input">
+                  </div>
+                  
+              </form>
+          </div>
+        </div>
+      </div>
 
+
+      <div id="login" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>login up</h2>
+            <span class="modal-close">×</span>
+        </div>
+        <div class="modal-inner-content">
+            <form id="">
+                <div class="form-field">
+                    <input type="text" id="name" placeholder="Enter Your Name" class="form-input">
+                </div>
+                <div class="form-field">
+                    <input type="email" id="email" placeholder="Enter Your email" class="form-input">
+                </div>
+                <div class="form-field">
+                    <input type="tel" id="number" placeholder="Enter Your Phone Number" class="form-input">
+                </div>
+                <div class="form-field">
+                    <input type="password" id="password" placeholder="Enter Your New Password" class="form-input">
+                </div>
+                
+            </form>
+        </div>
+        </div>
+      </div> 
+
+      <div id="modal-cart" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>My Cart  <span class="close">&times;</span></h2>
-               
+                <h2>My Cart</h2>
+                <span class="modal-close">×</span>
             </div>
-          
+        <div class="modal-inner-content">
           <div class="cart-details">
             <div class="container">
                 <div class="product-container">
@@ -310,27 +363,106 @@
                 </div>
                 <div class="productTotal"></div>
             </div>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <!-- <div id="modal-cart" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">×</span>
+            <div class="modal-header">
+                <h2>My Cart</h2>
+            </div>
+          <div class="cart-details">
+            <div class="container">
+                <div class="product-container">
+                    <div class="product-header">
+                        <h5 class="cart-product-title">Title</h5>
+                        <h5 class="cart-product-price">Price</h5>
+                        <h5 class="cart-product-total">Quantity</h5>
+                        <h5 class="cart-product-quantity">Total</h5>
+                    </div>
+                    <div class="products"></div>
+                </div>
+                <div class="productTotal"></div>
+            </div>
+          </div>
         </div>
       
-      </div>
+    </div>
 
-    <!-- <div class="cart-details">
-        <div class="container">
-            <div class="product-container">
-                <div class="product-header">
-                    <h5 class="cart-product-title">Title</h5>
-                    <h5 class="cart-product-price">Price</h5>
-                    <h5 class="cart-product-total">Quantity</h5>
-                    <h5 class="cart-product-quantity">Total</h5>
+   
+
+
+    <div class="modal" id="modal-signup">
+        <div class="modal-header">
+            <h2>Sign up</h2>
+            <span class="close">&times;</span>
+        </div>
+        <div class="modal-content">
+            <form id="signup">
+                <div class="form-field">
+                    <input type="text" id="name" placeholder="Enter Your Name" class="form-input">
                 </div>
-                <div class="products"></div>
-            </div>
-            <div class="productTotal"></div>
+                <div class="form-field">
+                    <input type="email" id="email" placeholder="Enter Your email" class="form-input">
+                </div>
+                <div class="form-field">
+                    <input type="tel" id="number" placeholder="Enter Your Phone Number" class="form-input">
+                </div>
+                <div class="form-field">
+                    <input type="password" id="password" placeholder="Enter Your New Password" class="form-input">
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-login">
+        <div class="modal-header">
+            <h2>Login</h2>
+            <span class="close">&times;</span>
+        </div>
+        <div class="modal-content">
+            <form id="signup">
+                <div class="form-field">
+                    <input type="text" id="name" placeholder="Enter Your Name" class="form-input">
+                </div>
+                <div class="form-field">
+                    <input type="email" id="email" placeholder="Enter Your email" class="form-input">
+                </div>
+                <div class="form-field">
+                    <input type="tel" id="number" placeholder="Enter Your Phone Number" class="form-input">
+                </div>
+                <div class="form-field">
+                    <input type="password" id="password" placeholder="Enter Your New Password" class="form-input">
+                </div>
+                
+            </form>
         </div>
     </div> -->
-    
-    
+
+
+    <!-- <button id="modalA" class="modalOpenBtn" onclick="openModal('modalA')">Modal A</button>
+    <div id="modalA" class="modal">
+      <div class="modalContent">
+        <span class="modalClose">×</span>
+        <div>
+          Modal A text
+        </div>
+      </div>
+    </div>
+
+    <button id="modalB" class="modalOpenBtn" onclick="openModal('modalB')">Modal B</button>
+    <div id="modalB" class="modal">
+      <div class="modalContent">
+        <span class="modalClose">×</span>
+        <div>
+          Modal B text
+        </div>
+      </div>
+    </div>   -->
     
 </body>
 <script src='assets/js/main.js'></script>
